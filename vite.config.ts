@@ -10,8 +10,9 @@ export default defineConfig(({ mode }) => {
         host: '0.0.0.0',
       },
       plugins: [react()],
-      base: '/kgents-web/',  
-      // base: './',
+      // base: '/kgents-web/',  
+      base: '/', // root because custom domain points to this project
+      // base: './',  // for local development
       define: {
         'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
         'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
